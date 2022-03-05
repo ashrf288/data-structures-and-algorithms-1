@@ -20,7 +20,7 @@ def insertShiftArray (array,value):
     return new_array
 
      
-###############################
+######################################
 def removeShiftArray (array):
           """
           the removeShiftArray function :  removes an element from 
