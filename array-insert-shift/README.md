@@ -4,6 +4,6 @@
  2- Write a second function that removes an element from the middle index and shifts other elements in the array to fill the new gap.
 
 ## Whiteboard Process
+ https://miro.com/app/board/uXjVOHu0Fv4=/
  
-
- 
+![image](https://user-images.githubusercontent.com/97835837/156896018-64f19959-02c7-479f-b768-1d9c07a063bd.png)
