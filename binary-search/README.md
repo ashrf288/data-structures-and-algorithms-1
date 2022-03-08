@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 [ This is the link for miro ](https://miro.com/app/board/uXjVOHPJwSU=/)
 ![alt text](BinarySearch.PNG)
@@ -39,3 +40,7 @@ Example:
  
 
 
+=======
+https://miro.com/app/board/uXjVOHPJwSU=/
+
+>>>>>>> 1181a5ae2151ee8bc67f6c3017eb43f7d9303cfb
