@@ -5,7 +5,7 @@ def binary_search(array, value):
      return the index of the arrays element that is equal to the value of the search key, 
      or -1 if the element is not in the array.
     """
-
+####### 
 
     low = 0
     high = len(array)
