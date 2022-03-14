@@ -63,3 +63,55 @@ def  test_not_includes():
     assert not students.includes('nadia')
 
 
+############################ CD 6 :linked-list-insertions  ################################
+
+
+def test_append(): 
+    """
+         
+        arguments: new value
+        adds a new node with the given value to the end of the list
+
+        
+    """
+
+    students=Linked_List()
+    students.insert('eman')
+    students.insert('elyas')
+    students.insert('mohammad')
+    students.append('last')
+
+     
+
+    assert students.to_string()== '{ mohammad } -> { elyas } -> { eman } -> { last } -> NULL'
+ 
+def test_insert_before():
+    """
+        arguments: value, new value
+        adds a new node with the given new value immediately before the first node 
+        that has the value specified
+    """
+    students=Linked_List()
+    students.insert('elyas')
+    students.insert('eman')
+    students.insert('nuha')
+    students.insert_before('eman','100')
+    
+    assert students.to_string()== '{ nuha } -> { 100 } -> { eman } -> { elyas } -> NULL'
+
+
+def test_insert_after():
+    """
+        arguments: value, new value
+        adds a new node with the given new value immediately after the first node
+         that has the value specified
+    """
+    students=Linked_List()
+    students.insert('elyas')
+    students.insert('eman')
+    students.insert('nuha')
+    students.insert_after('elyas','1992')
+    
+    assert students.to_string()== '{ nuha } -> { eman } -> { elyas } -> { 1992 } -> NULL'
+
+ 

@@ -1,4 +1,5 @@
- 
+
+
 
 class Node : 
     """ Node class has 2 properties:
@@ -84,7 +85,71 @@ class Linked_List:
                     break
         return result
         
+#########################CD 6 :linked-list-insertions  ########################
+    def append (self,value):
+        """
+         
+        arguments: new value
+        adds a new node with the given value to the end of the list
 
+        
+        """
+        new_node=Node(value)
+        cureent=self.head
+        if cureent : 
+            while cureent.next:
+                cureent=cureent.next
+            cureent.next=new_node
+        else :
+            self.head=new_node
+    
+    def insert_before(self,value,new_value):
+        """
+        arguments: value, new value
+        adds a new node with the given new value immediately before the first node 
+        that has the value specified
+        """
+
+        if self.includes(value):
+            current=self.head
+            if current.value==value:
+                new_node=Node(new_value)
+                new_node.next=current
+                self.head=new_node
+            else : 
+                while current.next:
+                    if current.next.value==value:
+                        new_node=Node(new_value)
+                        new_node.next=current.next
+                        current.next=new_node
+                        break
+                    current=current.next
+        else:
+            return "this item is not exist"
+
+
+    def insert_after(self,value,new_val)   :
+        """
+        arguments: value, new value
+        adds a new node with the given new value immediately after the first node
+         that has the value specified
+        """
+
+        if self.includes(value):
+            current=self.head
+            while current:
+                if current.value==value:
+                   new_node=Node(new_val)
+                   new_node.next=current.next
+                   current.next=new_node
+                   break
+                elif current.next==None:
+                    new_node=Node(new_val)
+                    current.next=new_node
+                current=current.next
+        else : 
+           return "there is no value to insert after it "
+           
          
  ############################################         
 if __name__=="__main__":
@@ -96,6 +161,21 @@ if __name__=="__main__":
     print(ll.head.value)
     print(ll.head.next.value)
     print (ll.to_string())
+
+    print('**************** CD 6 :linked-list-insertions **********')
+    ll.append('last')
+    print (ll.to_string())
+
+    ll.insert_before('eman','100')
+    print (ll.to_string())
+
+    ll.insert_before('nuha','500')
+    print (ll.to_string())
+
+    ll.insert_after('elyas','1992')
+    print (ll.to_string())
+
+
 
 
 
